@@ -157,6 +157,91 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
   },
+
+  // Info-tekst på forsiden
+  infoText: {
+    color: colors.white,
+    fontSize: 15,
+    marginBottom: 24,
+  },
+  emptyText: {
+    color: colors.white,
+    fontSize: 15,
+    textAlign: "center",
+    marginBottom: 20,
+    marginTop: 10,
+  },
+
+  // Søgefelt (Byg hold)
+  searchInput: {
+    backgroundColor: colors.white,
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    fontSize: 16,
+    color: colors.purple,
+    marginBottom: 12,
+  },
+
+  // Tilføj/fjern-knap i søgeresultater
+  addButton: {
+    backgroundColor: colors.green,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    borderRadius: 8,
+  },
+  addButtonSelected: {
+    backgroundColor: colors.purpleLight,
+  },
+  addButtonText: {
+    color: colors.purple,
+    fontWeight: "bold",
+    fontSize: 14,
+  },
+  addButtonTextSelected: {
+    color: colors.white,
+  },
+
+  // Billeder af holdet
+  teamPhoto: {
+    width: "100%",
+    height: 200,
+    borderRadius: 10,
+    marginBottom: 14,
+    resizeMode: "cover",
+  },
+  scanPhoto: {
+    width: "100%",
+    height: 300,
+    borderRadius: 10,
+    marginTop: 16,
+    resizeMode: "cover",
+  },
+
+  // Kaptajn-forslag (Tips)
+  captainCard: {
+    backgroundColor: colors.green,
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+  },
+  captainLabel: {
+    color: colors.purple,
+    fontSize: 12,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    marginBottom: 4,
+  },
+  captainName: {
+    color: colors.purple,
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  captainMeta: {
+    color: colors.purple,
+    fontSize: 13,
+    marginTop: 2,
+  },
 });
 
 export default styles;

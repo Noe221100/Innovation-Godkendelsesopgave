@@ -4,6 +4,15 @@
     "slug": "FPLAgent",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light"
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Appen bruger kameraet, så du kan tage et billede af dit rigtige FPL-hold.",
+          "photosPermission": "Appen bruger dine billeder, så du kan vælge et billede af dit hold."
+        }
+      ]
+    ]
   }
 }

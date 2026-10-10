@@ -1,44 +1,66 @@
 // App.js
-// Sætter navigationen op mellem de tre skærme (stack-navigation).
+// Sætter navigationen op med bund-tabs mellem appens fem skærme.
 
 import React from "react";
+import { Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StatusBar } from "expo-status-bar";
 
-import { HomeScreen, SquadScreen, TipsScreen } from "./screens";
+import {
+  HomeScreen,
+  SquadScreen,
+  BuildScreen,
+  ScanScreen,
+  TipsScreen,
+} from "./screens";
 import { colors } from "./styles";
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+// Lille hjælper: viser et emoji-ikon i tab-baren.
+const icon = (emoji) => () => <Text style={{ fontSize: 18 }}>{emoji}</Text>;
 
 export default function App() {
   return (
     <NavigationContainer>
       <StatusBar style="light" />
-      <Stack.Navigator
-        initialRouteName="Home"
+      <Tab.Navigator
+        initialRouteName="Hjem"
         screenOptions={{
           headerStyle: { backgroundColor: colors.purple },
           headerTintColor: colors.green,
           headerTitleStyle: { fontWeight: "bold" },
+          tabBarActiveTintColor: colors.purple,
+          tabBarInactiveTintColor: colors.darkGrey,
         }}
       >
-        <Stack.Screen
-          name="Home"
+        <Tab.Screen
+          name="Hjem"
           component={HomeScreen}
-          options={{ title: "FPL Agent" }}
+          options={{ title: "FPL Agent", tabBarIcon: icon("🏠") }}
         />
-        <Stack.Screen
-          name="Squad"
+        <Tab.Screen
+          name="Mit hold"
           component={SquadScreen}
-          options={{ title: "Mit hold" }}
+          options={{ tabBarIcon: icon("👕") }}
         />
-        <Stack.Screen
+        <Tab.Screen
+          name="Byg hold"
+          component={BuildScreen}
+          options={{ tabBarIcon: icon("🔍") }}
+        />
+        <Tab.Screen
+          name="Scan"
+          component={ScanScreen}
+          options={{ tabBarIcon: icon("📷") }}
+        />
+        <Tab.Screen
           name="Tips"
           component={TipsScreen}
-          options={{ title: "Dagens tips" }}
+          options={{ tabBarIcon: icon("⭐") }}
         />
-      </Stack.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
