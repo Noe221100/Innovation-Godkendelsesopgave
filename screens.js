@@ -63,7 +63,7 @@ export function HomeScreen({ navigation }) {
       <Text style={styles.title}>FPL Agent</Text>
       <Text style={styles.subtitle}>
         Din hjælper til Fantasy Premier League.{"\n"}
-        Byg dit hold og få dagens bedste tips ét sted.
+        Byg dit hold, scan det og få dagens bedste tips.
       </Text>
 
       <Text style={styles.infoText}>Dit hold: {count}/{MAX_PLAYERS} spillere valgt</Text>

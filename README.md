@@ -2,6 +2,8 @@
 
 En simpel mobil-app (React Native + Expo), der fungerer som en hjælper til **Fantasy Premier League**. Idéen er at samle det vigtigste ét sted, så man bruger mindre tid på at hoppe mellem den officielle app, statistiksider og forums.
 
+**GitHub:** https://github.com/Noe221100/Innovation-Godkendelsesopgave
+
 ## Demovideo
 
 [Indsæt link til demovideo her]
@@ -52,4 +54,4 @@ npx expo start
 Scan QR-koden med **Expo Go** på din telefon (telefon og computer skal være på samme WiFi).
 
 ## Hvem har kodet hvad
-- [Dit navn]: hele appen (alle fem skærme, navigation, API-integration, lokal lagring og kamera).
+- Johan Schaldemose Noe: hele appen (alle fem skærme, navigation, API-integration, lokal lagring og kamera).
